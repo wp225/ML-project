@@ -6,8 +6,8 @@ def get_requirements(path):
     requirements = []
     with open(path, 'r') as f:
         requirements = f.readlines()
-        requirements = [req.strip() for req in requirements]  # Remove leading/trailing whitespace
-        requirements = [req for req in requirements if req != '\n']  # Remove empty lines
+        requirements = [req.strip() for req in requirements]
+        requirements = [req for req in requirements if req != '\n']
 
         if E in requirements:
             requirements.remove(E)
@@ -20,5 +20,5 @@ setup(
     author='JJ',
     author_email='georgejoshi10@gmail.com',
     packages=find_packages(),
-    install_requires=get_requirements('/Users/anshujoshi/PycharmProjects/ML-Project/Requirements.txt')
+    install_requires=get_requirements('Requirements.txt')
 )
