@@ -41,3 +41,11 @@ def evaluate_model(X_train, y_train, X_test, y_test, models):
     except Exception as E:
         logging.info('Failed Training Model')
         raise CustomException(E, sys)
+
+def load_object(file_path):
+    try:
+        with open(file_path,"rb") as file_obj:
+            return dill.load(file_obj)
+
+    except Exception as E:
+        raise CustomException(E,sys)
