@@ -2,38 +2,6 @@
 
 This project demonstrates the end-to-end workflow of a machine learning project, including data ingestion, preprocessing, model training, and deployment using Flask.
 
-## Project Structure
-
-ML-project/
-│
-├── notebook/
-│ ├── EDA.ipynb
-│ └── model_training.ipynb
-│
-├── src/
-│ ├── components/
-│ │ ├── artifacts/
-│ │ │ ├── data.csv
-│ │ │ ├── train.csv
-│ │ │ ├── test.csv
-│ │ │ ├── model.pkl
-│ │ │ └── preprocessor.pkl
-│ │ ├── data_ingestion.py
-│ │ ├── data_transformation.py
-│ │ └── model_trainer.py
-│ ├── pipeline/
-│ │ ├── infer_pipeline.py
-│ │ └── training_pipeline.py
-│ ├── exceptions.py
-│ ├── logger.py
-│ └── utils.py
-│
-└── templates/
-|  ├── home.html
-|  └── index.html
-|── application.py
-|── app.py
-
 ## Usage:
 
 1. EDA.ipynb: Jupyter notebook for exploratory data analysis.
@@ -54,9 +22,49 @@ ML-project/
    ```bash
    git clone https://github.com/wp225/ML-project.git
    cd ML-project
+   ```
    
 2. Create a docker image:
+   ```bash
    docker build -t flask-app .
+   ```
    
-3.Run Docker Container:
-  docker run -p 5000:5000 flask-app
+4. Run Docker Container:
+   ```bash
+   docker run -p 5000:5000 flask-app
+   ```bash
+
+## Project Structure:
+
+```bash
+ML-project/
+│
+├── notebook/
+│   ├── EDA.ipynb
+│   └── model_training.ipynb
+│
+├── src/
+│   ├── components/
+│   │   ├── artifacts/
+│   │   │   ├── data.csv
+│   │   │   ├── train.csv
+│   │   │   ├── test.csv
+│   │   │   ├── model.pkl
+│   │   │   └── preprocessor.pkl
+│   │   ├── data_ingestion.py
+│   │   ├── data_transformation.py
+│   │   └── model_trainer.py
+│   ├── pipeline/
+│   │   ├── infer_pipeline.py
+│   │   └── training_pipeline.py
+│   ├── exceptions.py
+│   ├── logger.py
+│   └── utils.py
+│
+└── templates/
+    ├── home.html
+    └── index.html
+
+```
+
+
